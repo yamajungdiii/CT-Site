@@ -649,7 +649,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       min-width: 250px;
       border-radius: 10px;
       overflow: hidden;
-      border: 1px solid #1e293b;
+      border: 0px solid #1e293b;
     }
 
     .tl-img-frame img {
@@ -684,8 +684,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       	font-size: 1.2rem !important;
       }
       .tl-main-container {
-        padding-left: 40px;
+	  	position: relative;
+   	    max-width: 80%;
+   	    margin: 50px auto;
+   	    padding-left: 50px;
       }
+    }
     }
   </style>
 
