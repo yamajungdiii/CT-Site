@@ -79,7 +79,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-5122867 elementor-widget elementor-widget-html" data-id="5122867" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
-					<style>
+	<style>
 /* นำเข้า Font Quicksand จาก Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
 
@@ -105,6 +105,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     position: relative;
     z-index: 1;
 }
+
+.responsive-logo {
+        /* ขนาดเริ่มต้นสำหรับ Desktop */
+        width: 100%;
+        max-width: 300px !important; /* กำหนดขนาดใหญ่สุดที่คุณต้องการบนคอม */
+        height: auto;
+        display: inline-block; /* จัดกึ่งกลางได้ง่าย */
+        background-color: rgba(255, 255, 255,); /* สีพื้นหลังขาวจางๆ */
+    	padding: 20px;               /* เว้นระยะห่างระหว่างโลโก้กับขอบพื้นหลัง */
+    	border-radius: 20px;          /* ทำให้เป็นวงกลม (ถ้าอยากได้สี่เหลี่ยมมนให้ใส่สัก 20px) */
+    	backdrop-filter: blur(10px); /* ทำให้พื้นหลังที่ลอดผ่านโลโก้ดูฟุ้งๆ */
+   		border: 1px solid rgba(255, 255, 255, 0.2); /* เส้นขอบบางๆ ให้ดูหรู */
+   		display: inline-block;       /* บังคับให้พื้นหลังกว้างเท่าตัวรูปพอดี */
+    }
 
 .welcome-logo {
     width: clamp(150px, 50vw, 1024px);
@@ -153,6 +167,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     .welcome-logo {
         width: 60%; /* ย่อโลโก้ลงในมือถือ */
     }
+    .responsive-logo {
+        max-width: 150px; /* ลดขนาดลงในมือถือ */
+    }
     .welcome-title {
         font-size: 40px; /* ย่อขนาดหัวข้อในมือถือ */
     }
@@ -200,19 +217,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 
 <style>
-    .responsive-logo {
-        /* ขนาดเริ่มต้นสำหรับ Desktop */
-        width: 100%;
-        max-width: 300px !important; /* กำหนดขนาดใหญ่สุดที่คุณต้องการบนคอม */
-        height: auto;
-        display: inline-block; /* จัดกึ่งกลางได้ง่าย */
-        background-color: rgba(255, 255, 255,); /* สีพื้นหลังขาวจางๆ */
-    	padding: 20px;               /* เว้นระยะห่างระหว่างโลโก้กับขอบพื้นหลัง */
-    	border-radius: 20px;          /* ทำให้เป็นวงกลม (ถ้าอยากได้สี่เหลี่ยมมนให้ใส่สัก 20px) */
-    	backdrop-filter: blur(10px); /* ทำให้พื้นหลังที่ลอดผ่านโลโก้ดูฟุ้งๆ */
-   		border: 1px solid rgba(255, 255, 255, 0.2); /* เส้นขอบบางๆ ให้ดูหรู */
-   		display: inline-block;       /* บังคับให้พื้นหลังกว้างเท่าตัวรูปพอดี */
-    }
     .about-wrapper {
   /* 1. จัดกึ่งกลางและกำหนดความกว้างสูงสุด */
   max-width: 1200px;                
@@ -240,9 +244,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
     /* ปรับขนาดสำหรับ Mobile */
     @media (max-width: 768px) {
-        .responsive-logo {
-            max-width: 150px; /* ลดขนาดลงในมือถือ */
-        }
         .about-wrapper {
     padding: 0 20px; /* มือถือเว้นระยะแค่ 20px พอ */
     padding-top: 30px;
