@@ -107,7 +107,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 
 .welcome-logo {
-    width: clamp(150px, 30vw, 500px);
+    width: clamp(150px, 50vw, 1024px);
     height: auto;
     display: block;
     margin-bottom: 25px;
@@ -202,8 +202,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <style>
     .responsive-logo {
         /* ขนาดเริ่มต้นสำหรับ Desktop */
-        width: auto;
-        max-width: 300px; /* กำหนดขนาดใหญ่สุดที่คุณต้องการบนคอม */
+        width: 100%;
+        max-width: 300px; !important /* กำหนดขนาดใหญ่สุดที่คุณต้องการบนคอม */
         height: auto;
         display: inline-block; /* จัดกึ่งกลางได้ง่าย */
         background-color: rgba(255, 255, 255,); /* สีพื้นหลังขาวจางๆ */
